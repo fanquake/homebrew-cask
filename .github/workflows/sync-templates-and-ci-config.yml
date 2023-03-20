@@ -39,7 +39,7 @@ jobs:
         run: ./.github/actions/sync/templates.rb 'vendor/${{ matrix.repo }}' '${{ matrix.repo }}' 'sync-templates-and-ci-config'
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@5e9d0ee9ea5ccf865a52a571cba827e4b52a1aff
+        uses: peter-evans/create-pull-request@38e0b6e68b4c852a5500a94740f0e535e0d7ba54
         with:
           path: vendor/${{ matrix.repo }}
           token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
